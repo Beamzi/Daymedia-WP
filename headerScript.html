@@ -1,0 +1,33 @@
+<link rel="preload" href="https://brisbanewebsitedesign.au/wp-content/uploads/2024/10/laptoppurple2.json" as="fetch" type="application/json" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js">
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.querySelector('body');
+    const header = document.querySelector('.header-parent')
+    const logo = document.querySelector('.logo img');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            body.classList.add('body__scroll')
+            header.classList.add('header__scroll')
+            logo.setAttribute('id', 'logo__scroll')
+        }
+        else if (window.scrollY === 0) {
+            body.classList.remove('body__scroll')
+            header.classList.remove('header__scroll')
+            logo.removeAttribute('id')
+            
+            body.classList.add('body__back')
+            header.classList.add('header__back')
+            logo.setAttribute('id', 'logo__back')
+        };
+    });
+});
+</script>
+
+
+
+
+

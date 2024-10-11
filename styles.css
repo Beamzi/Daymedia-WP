@@ -6,9 +6,6 @@
 	overflow-x:hidden;
 }
 
-
-.hero-json-container {
-}
 .hero-json {
 	max-width: 150px;
 	max-height: 150px;
@@ -25,12 +22,6 @@ filter: drop-shadow(0px 20px 0px purple) saturate(150%);
 	}
 }
 
-
-
-
-.nav-items {
-	margin-top: 22px;
-}
 
 
 .graph-container {
@@ -89,7 +80,6 @@ filter: drop-shadow(0px 20px 0px purple) saturate(150%);
 }
 
 .hero-panel__inner-content {
-	
 	position: relative
 	display: flex;
 	justify-content: center;
@@ -99,9 +89,7 @@ filter: drop-shadow(0px 20px 0px purple) saturate(150%);
 
 
 .below-service-parent {
-	max-width: 100%;
-
-	
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -123,7 +111,6 @@ filter: drop-shadow(0px 20px 0px purple) saturate(150%);
 
 .below-service__inner {
     z-index: 4;
-
     background: repeating-linear-gradient(
         -45deg,
         rgba(255,106,108,1) 0%,
@@ -220,7 +207,7 @@ transform: rotate(2turn) scale(1.5);
 .services-text {
 	min-height: 70px;
 	max-height: 70px;
-	
+
 }
 #header-button, .all-buttons {
     background: rgb(0, 0, 0); 
@@ -247,7 +234,7 @@ transform: rotate(2turn) scale(1.5);
     width: 100%;
 		height: 133px;
     z-index: 999;
-backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg) blur(5px);
+backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg) blur(10px);
     background-color: rgba(255, 255, 255, 0.384); 
 }
 .logo-container {
@@ -255,17 +242,27 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 }
 
 
+/*
+ ---------------------
+ media queries below 
+  --------------------
+*/
 
 
 @media(max-width: 800px) {
+
+	
+	.below-service__outer-parent {
+	max-height: 100px;
+}
 	
 		body {
 		padding-top: 350px;
 	}
-	
-	.header-parent {
-		max-height: 300px;
+		.header-parent {
+		height: 350px;
 	}
+
 	.header-parent > * {
 		display: flex;
 		flex-direction: column;
@@ -288,11 +285,14 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 			padding-left: 5px;
 	}
 	
+	.hero-json-container {
+		position:relative;
+		top: 20px;
+		height: 300px;
+
+	}
 		.hero-json {
-		top: 100px;
 		left: 5px;
-		border: 3px red solid;
-		height: 100%;
 	}
 	
 	
@@ -313,7 +313,8 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 		left: 10%;
     max-width: 80%; 
 	}
-			.below-service-parent {
+	
+	.below-service-parent {
 		overflow: hidden;
 	}
 	.hero-panel h1 {
@@ -329,11 +330,6 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 	.hero-panel {
 		display: flex;
 		align-items: start;
-		height: 80vh;
-	}
-		#hero-panel__inner-content 
-	{
-		padding-bottom: 50px;
 	}
 	
 	#starter-package-btn {
@@ -344,36 +340,50 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 	}
 	
 }
-
-
-
-	
-
-
-
-
-
-
-
-
-
-@media(min-width: 802px) {
-	.hero-panel {
-		min-height: 70vh;
+@media(max-width: 1050px) {
+	.below-service-parent {
+		max-width: 1050px;
+	}
+			.elementor #below-service-parent {
+		overflow:hidden;
 	}
 }
 
+@media(min-width: 801px) {
+	.hero-panel {
+		min-height: 70vh;
+	}
+
+	.hero-json-container {
+	padding-right: 25px;
+}
+		.hero-panel__inner-content__left-container {
+		padding: 0px 30px 0px 25px;
+	}
+	.below-service__outer {
+		right: 200px;
+		width: 200px;
+	}
+		.below-service__inner {
+		top: 50px;
+		left: 200px;
+	}
+	.below-service__inner-content {
+		padding: 0px 50px 0px 50px;
+	}	
+}
+
+
 
 @media(min-width: 1050px) {
+	
 	.hero-panel__inner-content__left-container {
-		padding: 0px 25px 0px 25px;
+		padding: 0px 30px 0px 70px;
 	}
 	.hero-panel {
     width: 100%;
 	  height: 70vh;
 	}
-
-	
 		.below-service__inner-content {
 		padding: 0px 50px 0px 50px;
 	}
@@ -399,9 +409,54 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 	.social-icons {
 	padding: 0px 70px 0px 20px;
 	max-width: 400px;
-}
+	}
 	
+/*JAVASCRIPT HEADER CLASSES BELOW */
+	
+#logo__back {
+		transition: width ease 0.4s;
+	width: 133px;
 }
+.body__back {
+		transition: padding-top ease  0.4s;
+	padding-top: 133px;
+}
+.header__back {
+		transition: height ease 0.4s;
+	height: 133px;
+}
+
+#logo__scroll {
+	transition: width ease 0.4s;
+	width: 66.5px;
+}
+.header__scroll {
+	transition: height ease 0.4s;
+	height: 80px;
+}
+.body__scroll {
+	transition: padding-top ease 0.4s;
+	padding-top: 80px;
+}
+
+/*JAVASCRIPT HEADER CLASSES ABOVE */
+
+}
+
+
+/*---not media queried*/
+
+	.icon-list-container {
+		min-width: 250px;
+		position: relative;
+		right: 10px;
+	}
+
+#hero-heading {
+	width: 95%;
+}
+
+
 
 .header-parent > *{
 		display: flex;

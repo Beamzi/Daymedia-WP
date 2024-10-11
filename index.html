@@ -1,0 +1,65 @@
+<div id="lottie" style="max-width: 100%; max-height: 100%; min-width: 350px"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://brisbanewebsitedesign.au/wp-content/uploads/2024/10/laptoppurple2.json'
+    });
+    var lottieElement = document.getElementById('lottie');
+    lottieElement.addEventListener('mouseover', function() {
+            animation.setSpeed(5);
+        
+    });
+    lottieElement.addEventListener('mouseout', function() {
+        animation.setSpeed(1)
+
+    });
+});
+</script>
+
+
+
+<link rel="preload" href="https://brisbanewebsitedesign.au/wp-content/uploads/2024/10/laptoppurple2.json" as="fetch" type="application/json" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header-parent');
+    const logoContainer = document.querySelector('.logo-container');
+
+    // Check if the elements exist to avoid errors
+    if (header && logoContainer) {
+        window.addEventListener('scroll', function() {
+            console.log('Scroll event triggered');
+            header.style.height = '66px';
+            logoContainer.style.width = '66px';
+        });
+    } else {
+        console.error("Header or logo container not found.");
+    }
+});
+</script>
+
+
+
+
+
+
+<link rel="preload" href="https://brisbanewebsitedesign.au/wp-content/uploads/2024/10/laptoppurple2.json" as="fetch" type="application/json" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js">
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header-parent')
+    const logoContainer = document.querySelector('.logo-container');
+
+    window.addEventListener('scroll', function() {
+        header.style.height = '66px';
+        logoContainer.style.width = '66px';
+    
+    });
+});
+</script>
+

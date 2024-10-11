@@ -1,0 +1,35 @@
+<div id="lottie" style="max-width: 100%; max-height: 100%; min-width: 350px"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://brisbanewebsitedesign.au/wp-content/uploads/2024/10/laptoppurple2.json'
+    });
+    var lottieElement = document.getElementById('lottie');
+    lottieElement.addEventListener('mouseover', function() {
+            animation.setSpeed(4);    
+    });
+    let speed = 5;
+    let count = 0;
+    lottieElement.addEventListener('click', function(e) {
+        count++
+        if (count > 2) {
+            count = 1;
+        }
+        if (count === 1) {
+            animation.pause();
+        }
+        else if (count === 2) {
+            animation.play();
+            animation.setSpeed(speed++);
+        }
+    });
+    lottieElement.addEventListener('mouseout', function() {
+         animation.setSpeed(1)
+         speed = 5;
+    });
+});
+</script>
