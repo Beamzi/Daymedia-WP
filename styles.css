@@ -1,7 +1,25 @@
  /*careful please, do not edit this css or you will break the universe*/
 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html body {
+	line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	line-height: 1.4 !important;
+}
+
+span {
+	font-family: monospace;
+}
 
  body {
+	background-color: white;
 	padding-top: 133px;
 	overflow-x:hidden;
 }
@@ -80,7 +98,7 @@ filter: drop-shadow(0px 20px 0px purple) saturate(150%);
 }
 
 .hero-panel__inner-content {
-	position: relative
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -205,10 +223,10 @@ transform: rotate(2turn) scale(1.5);
 
 }
 .services-text {
-	min-height: 70px;
-	max-height: 70px;
-
+	min-height: 80px;
+	max-height: 80px;
 }
+
 #header-button, .all-buttons {
     background: rgb(0, 0, 0); 
     background-size: 300%;
@@ -284,15 +302,20 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 		#header-phone {
 			padding-left: 5px;
 	}
+
 	
 	.hero-json-container {
 		position:relative;
-		top: 20px;
+		margin-bottom: 10%;
+		margin-top: 15%;
 		height: 300px;
+		width: 70%;
 
 	}
 		.hero-json {
-		left: 5px;
+		left: 20%;
+			
+			
 	}
 	
 	
@@ -340,6 +363,13 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 	}
 	
 }
+
+
+/* -------------------
+   WIDE MEDIA QUERIES
+	--------------------
+   */
+
 @media(max-width: 1050px) {
 	.below-service-parent {
 		max-width: 1050px;
@@ -349,17 +379,30 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 	}
 }
 
-@media(min-width: 801px) {
+/* -----------------
+ MEDIA BLIND SPLOT
+  -------------------*/
+@media(min-width: 801px) and (max-width: 1050px) {
 	.hero-panel {
 		min-height: 70vh;
 	}
-
-	.hero-json-container {
-	padding-right: 25px;
-}
-		.hero-panel__inner-content__left-container {
-		padding: 0px 30px 0px 25px;
+	#hero-panel__inner-content__left-container {
+	padding-left: 50px;
 	}
+	#hero-json-container {
+		position: relative;
+		right: 30px;
+	}
+	
+	.service-headings {
+		position: relative;
+		top: 20px;
+		min-height: 80px;
+	}
+		#services-text {
+	min-height: 128px;
+	max-height: 128px;
+}
 	.below-service__outer {
 		right: 200px;
 		width: 200px;
@@ -374,7 +417,9 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 }
 
 
-
+/*-----------------
+  MAIN WIDE MEDIA QUERIES
+ --------------- */
 @media(min-width: 1050px) {
 	
 	.hero-panel__inner-content__left-container {
@@ -412,7 +457,7 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 	}
 	
 /*JAVASCRIPT HEADER CLASSES BELOW */
-	
+
 #logo__back {
 		transition: width ease 0.4s;
 	width: 133px;
@@ -437,12 +482,11 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 .body__scroll {
 	transition: padding-top ease 0.4s;
 	padding-top: 80px;
-}
+	}
+
 
 /*JAVASCRIPT HEADER CLASSES ABOVE */
-
-}
-
+} 
 
 /*---not media queried*/
 
@@ -462,6 +506,7 @@ backdrop-filter: grayscale(80%) contrast(90%) brightness(90%) hue-rotate(200deg)
 		display: flex;
 	justify-content: space-between;
 	> * {
+		
 	}
 }
 
